@@ -17,4 +17,3 @@ This is a cross-platform social media application developed as a semester projec
 
 ## Author
 *   **Name:** Simon András Örs
-*   **Neptun Code:** [Insert your Neptun code here]
