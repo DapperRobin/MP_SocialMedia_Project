@@ -16,4 +16,6 @@ This is a cross-platform social media application developed as a semester projec
 *   **Database:** Centralized database running in a Docker container
 
 ## Author
-*   **Name:** Simon András Örs
+Created by András Örs - DapperRobin - Simon for educational and research purposes.
+
+
