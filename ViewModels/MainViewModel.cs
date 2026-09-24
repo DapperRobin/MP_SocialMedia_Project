@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.ObjectModel;
+using System.Windows.Input;
 
-namespace SMP_MP.ViewModels
+public class MainViewModel
 {
-    internal class MainViewModel
-    {
-    }
 }

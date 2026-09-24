@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SMP_MP.Views.RegisterPage">
+    
+    <VerticalStackLayout Margin="0,100,0,0">
+        <Label 
+            Text="Register a new account today!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontAttributes="Bold"
+            FontSize="Title"/>
+
+        <Label Margin="0,15,0,0"
+            Text="Please add a Username and a Password!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontSize="Body"/>
+
+        <Grid RowDefinitions="Auto, Auto, Auto, Auto" ColumnDefinitions="*, *" Margin="40,20,40,20">
+            <Label Text="Username:" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" FontSize="20" Margin="20,0,0,0"/>
+            <Entry Text="{Binding Username}" Placeholder="Enter username" Grid.Row="0" Grid.Column="1" Margin="0,0,20,0"/>
+
+            <Label Text="Password:" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" FontSize="20" Margin="20,0,0,0"/>
+            <Entry Text="{Binding Password}" Placeholder="Enter password" IsPassword="True" Grid.Row="1" Grid.Column="1" Margin="0,0,20,0"/>
+
+
+            <Label Text="Re-enter Password:" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" FontSize="20" Margin="20,0,0,0"/>
+            <Entry Text="{Binding PasswordVerify}" Placeholder="Enter password again" IsPassword="True" Grid.Row="2" Grid.Column="1" Margin="0,0,20,0"/>
+
+            <Button Text="Register Account"  Grid.Row="3" Grid.ColumnSpan="2" WidthRequest="200" Margin="0,25,0,0"/>
+
+        </Grid>
+        
+    </VerticalStackLayout>
+</ContentPage>

@@ -6,9 +6,38 @@
     xmlns:local="clr-namespace:SMP_MP"
     xmlns:views="clr-namespace:SMP_MP.Views">
 
-    <ShellContent
-        Title="SMP_MP"
-        ContentTemplate="{DataTemplate views:MainPage}"
-        Route="MainPage" />
+    <Shell.FlyoutHeader>
+        <Label Text="{Binding UserName}" Margin="16" />
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <Label Text="{Binding AppVersion}" Margin="16" />
+    </Shell.FlyoutFooter>
+
+    <FlyoutItem Title="Feed" Route="MainPage">
+        <ShellContent ContentTemplate="{DataTemplate views:MainPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Profile" Route="ProfilePage">
+        <ShellContent ContentTemplate="{DataTemplate views:ProfilePage}" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Friends" Route="FriendsPage">
+        <ShellContent ContentTemplate="{DataTemplate views:FriendsPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Settings" Route="SettingsPage">
+        <ShellContent ContentTemplate="{DataTemplate views:SettingsPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Login" Route="LoginPage">
+        <ShellContent ContentTemplate="{DataTemplate views:LoginPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Register" Route="RegisterPage">
+        <ShellContent ContentTemplate="{DataTemplate views:RegisterPage}" />
+    </FlyoutItem>
+
+    <MenuItem Text="Logout" Command="{Binding LogoutCommand}" />
 
 </Shell>

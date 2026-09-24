@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SMP_MP.Controls.PostCard_Mockup">
+    
+    <VerticalStackLayout Spacing="10" Padding="6">
+
+
+        <VerticalStackLayout Spacing="8">
+
+            <!-- Author row -->
+            <HorizontalStackLayout Spacing="10">
+                <Border StrokeShape="RoundRectangle 20"
+                Stroke="LightGray"
+                StrokeThickness="1"
+                Padding="0"
+                HeightRequest="44"
+                WidthRequest="44">
+                    <Image Source="profile.png"
+                   Aspect="AspectFill"
+                   HeightRequest="44"
+                   WidthRequest="44" />
+                </Border>
+
+                <VerticalStackLayout Spacing="0" VerticalOptions="Center">
+                    <!-- {Binding AuthorName} -->
+                    <Label Text="DapperRobin"
+                   FontAttributes="Bold"
+                   FontSize="16" />
+                    <!-- {Binding Date, StringFormat='{0:yyyy.MM.dd}'} -->
+                    <Label Text="2026.01.15."
+                   FontSize="12"
+                   TextColor="Gray" />
+                </VerticalStackLayout>
+            </HorizontalStackLayout>
+
+            <!-- Post title -->
+            <!-- {Binding PostTitle} -->
+            <Label Text="This is the post title very long title indeed indeed"
+           FontAttributes="Bold"
+           FontSize="20" />
+
+        </VerticalStackLayout>
+
+        <Grid>
+                <Border StrokeThickness="4" Stroke="Black" Padding="6">
+                    <Grid RowDefinitions="*,*">
+                    <ScrollView IsVisible="{Binding HasText}" VerticalOptions="Fill" Grid.Row="0">
+                        <!-- {Binding ContentText} -->
+                        <Label Text="Lorem IpsumDolor sit amet, Lorem IpsumDolor sit amet, Lorem IpsumDolor sit amet, Lorem IpsumDolor sit amet, Lorem IpsumDolor sit amet, Lorem IpsumDolor sit amet, Lorem IpsumDolor sit amet, Lorem IpsumDolor sit amet, Lorem IpsumDolor sit amet, Lorem IpsumDolor sit amet, Lorem IpsumDolor sit amet, Lorem IpsumDolor sit amet, Lorem IpsumDolor sit amet,"
+                                   Padding="8"
+                                   LineBreakMode="WordWrap"
+                                   TextColor="Black" />
+                    </ScrollView>
+
+                    <!-- {Binding ImageSource} -->
+                    <Image Source="dotnet_bot.png"
+                               Aspect="AspectFill"
+                               HorizontalOptions="Fill"
+                               VerticalOptions="Fill"
+                               IsVisible="{Binding HasImage}"
+                                Grid.Row="1"/>
+                </Grid>
+                </Border>
+            </Grid>
+
+            <Grid ColumnDefinitions="Auto, Auto, *, Auto" VerticalOptions="Center" ColumnSpacing="20">
+                <StackLayout Orientation="Horizontal" Spacing="6" Grid.Column="0" VerticalOptions="Center">
+                    <Label Text="👍" FontSize="20" />
+                    <!-- {Binding Likes} -->
+                    <Label Text="4" VerticalOptions="Center" />
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" Spacing="6" Grid.Column="1" VerticalOptions="Center">
+                    <Label Text="💬" FontSize="20" />
+                    <!-- {Binding Comments} -->
+                    <Label Text="1" VerticalOptions="Center" />
+                </StackLayout>
+
+                 <StackLayout Orientation="Horizontal" Grid.Column="3" HorizontalOptions="End" Spacing="4"
+                    IsVisible="{Binding HasLocation}">
+                <Label Text="📍" />
+                <!-- {Binding Location} -->
+                <Label Text="Budapest" />
+            </StackLayout>
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentView>

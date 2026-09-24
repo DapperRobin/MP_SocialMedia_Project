@@ -1,7 +1,8 @@
-﻿using Microsoft.Maui;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
+using Microsoft.Maui;
 using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace SMP_MP
 {
@@ -12,6 +13,7 @@ namespace SMP_MP
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseMauiCommunityToolkit()
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

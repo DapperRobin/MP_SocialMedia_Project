@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SMP_MP.Views.SettingsPage">
+
+    <Shell.TitleView>
+
+        <Label Text="Settings"
+               FontAttributes="Bold"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               FontSize="38" 
+               Grid.Column="0"
+               Padding="0,0,50,0"/>
+
+    </Shell.TitleView>
+
+    <VerticalStackLayout>
+        <HorizontalStackLayout Margin="40,40,40,0">
+
+            <Label Text="App Theme: " 
+                   VerticalTextAlignment="Center"
+                   FontSize="18"/>
+            
+
+                <Picker x:DataType="Picker" Title="{Binding SelectedItem}">
+                    
+                </Picker>
+
+                
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

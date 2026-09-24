@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SMP_MP.Views.ProfilePage"
+             Title="ProfilePage"
+             xmlns:controls="clr-namespace:SMP_MP.Controls">
+
+
+    <Shell.TitleView>
+        
+        <Label Text="XYZ's Profile"
+               FontAttributes="Bold"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               FontSize="38" 
+               Grid.Column="0"
+               Padding="0,0,50,0"/>
+     
+    </Shell.TitleView>
+
+    <VerticalStackLayout>
+        <Border Margin="10, 10, 10, 10">
+            <Grid ColumnDefinitions="2*,3*,*"
+                  RowDefinitions="auto,auto">
+                <Image Source="profile.png"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       HeightRequest="150"/>
+
+                <Label Text="DapperRobin"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       FontSize="30"
+                       VerticalTextAlignment="Center"
+                       FontAttributes="Bold"/>
+
+                <Button Text="..."
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        HeightRequest="40"
+                        FontSize="40"
+                        Padding="0,-22,0,0"
+                        Margin="0,0,10,0"/>
+                
+                <Label Text="Üdv a profilomon! Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet." 
+                       Grid.Column="0"
+                       Grid.Row="1"
+                       Grid.ColumnSpan="3"
+                       Margin="30,0,30,20"/>
+            </Grid>
+        </Border>
+        <Border Margin="10, 10, 10, 10">
+            <VerticalStackLayout>
+                <Label Text="Posts:"
+               Margin="30,0,0,0"
+               FontSize="30"
+               FontAttributes="Bold"/>
+
+
+                <controls:PostCard_Mockup />
+
+                <CollectionView Grid.Row="0"
+                        ItemsSource="{Binding FeedPosts}"
+                        Margin="0,6,0,0"
+                        SelectionMode="None">
+                        
+                </CollectionView>
+
+            </VerticalStackLayout>
+        </Border>
+    </VerticalStackLayout>
+</ContentPage>

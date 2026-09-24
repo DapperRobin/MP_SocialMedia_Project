@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SMP_MP.Views.FriendsPage"
+             Title="FriendsPage">
+    <VerticalStackLayout>
+        <Grid ColumnDefinitions="*,*">
+            <Button Text="Search" Grid.Column="0" />
+            <Button Text="Incoming requests" Grid.Column="1" />
+        </Grid>
+
+        <!-- State 1: My Friends (visible for now) -->
+        <VerticalStackLayout x:Name="MyFriendsSection">
+            <Entry Placeholder="Search" />
+            <Label Text="My friends" FontAttributes="Bold" Margin="10,10,0,0" />
+            <CollectionView>
+                <!-- hardcode 2-3 sample rows here for now -->
+            </CollectionView>
+        </VerticalStackLayout>
+
+        <!-- State 2: Incoming Requests (hidden for now) -->
+        <VerticalStackLayout x:Name="RequestsSection" IsVisible="False">
+            <Label Text="Incoming requests" FontAttributes="Bold" Margin="10,10,0,0" />
+            <CollectionView>
+                <!-- Accept/Decline row layout here -->
+            </CollectionView>
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

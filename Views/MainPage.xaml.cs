@@ -1,5 +1,9 @@
-﻿using System;
+﻿using CommunityToolkit.Maui.Extensions;
+using CommunityToolkit.Maui.Views;
 using Microsoft.Maui.Controls;
+using SMP_MP.PopUps;
+using System;
+
 
 namespace SMP_MP.Views
 {
@@ -10,18 +14,6 @@ namespace SMP_MP.Views
         public MainPage()
         {
             InitializeComponent();
-        }
-
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
         }
     }
 }
