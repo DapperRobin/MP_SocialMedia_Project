@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.Maui;
+using Microsoft.Maui.Controls.Hosting;
+using Microsoft.Maui.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace SMP_MP
 {
@@ -16,7 +19,7 @@ namespace SMP_MP
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();

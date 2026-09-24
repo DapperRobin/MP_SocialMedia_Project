@@ -1,4 +1,7 @@
-﻿namespace SMP_MP
+﻿using System;
+using Microsoft.Maui.Controls;
+
+namespace SMP_MP.Views
 {
     public partial class MainPage : ContentPage
     {
@@ -9,7 +12,7 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+        private void OnCounterClicked(object sender, EventArgs e)
         {
             count++;
 
